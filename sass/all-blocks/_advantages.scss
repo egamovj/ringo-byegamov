@@ -1,0 +1,126 @@
+.advantages {
+    margin-top: 140px;
+    &__wrapper {
+        &-title {
+            text-align: center;
+            color: #282B22;
+            font-family: 'Raleway', sans-serif;
+            font-size: 46px;
+            line-height: 57.5px;
+            font-weight: 600;
+            margin-bottom: 80px;
+            text-transform: uppercase;
+        }
+        &-line {
+            opacity: 0.2;
+            border: 1px solid #282B22;
+            max-width: 1200px;
+            margin-bottom: 50px;
+        }
+        &-number {
+            display: flex;
+            position: relative;
+            &-span {
+                font-family: 'Raleway', sans-serif;
+                font-size: 24px;
+                line-height: 24px;
+                font-weight: 600;
+                color: #282B22;
+                opacity: 0.3;
+                margin-right: 573px;
+            }
+            & img {
+                position: absolute;
+                left: 110px;
+                bottom: -62.6px;
+            }
+            &-line {
+                max-width: 144px;
+                border: 1px solid #282B22;
+                margin-right: 40px;
+                opacity: 0.2;
+            }
+            &-right {
+                padding-right: 89px;
+                display: flex;
+                flex-direction: column;
+                row-gap: 10px;
+                & h4 {
+                    font-family: 'Raleway', sans-serif;
+                    font-size: 32px;
+                    line-height: 41.6px;
+                    font-weight: 600;
+                }
+                & p {
+                    font-family: 'Raleway', sans-serif;
+                    font-size: 16px;
+                    line-height: 21.6px;
+                    font-weight: 400;
+                    color: #282B22;
+                    opacity: 0.8;
+                    margin-bottom: 50px;
+                }
+                &__text {
+                    color: #AE7B3C;
+                }
+            }
+        }
+    }
+}
+
+@include for-tablet() {
+    .advantages {
+        margin-top: 100px;
+        &__wrapper {
+            &-title {
+                font-size: 36px;
+                line-height: 45px;
+            }
+            &-number {
+                &-span {
+                    margin-right: 273px;
+                }
+                & img {
+                    display: none;
+                }
+                &-right {
+                    & h4 {
+                        font-size: 28px;
+                        line-height: 36.4px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include for-mobile() {
+    .advantages {
+        margin-top: 80px;
+        &__wrapper {
+            &-title {
+                font-size: 24px;
+                line-height: 32.4px;
+            }
+            &-number {
+                &-span {
+                    margin-right: 15px;
+                    font-size: 20px;
+                    line-height: 26px;
+                }
+                & img {
+                    display: none;
+                }
+                &-line {
+                    display: none;
+                }
+                &-right {
+                    & h4 {
+                        font-size: 20px;
+                        line-height: 26px;
+                    }
+                }
+            }
+        }
+    }
+}

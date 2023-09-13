@@ -1,0 +1,118 @@
+    .cover {
+        background-color: #3D4A39;
+        margin-top: 140px;
+        &__wrapper {
+            padding: 100px 0;
+            & h2 {
+                text-align: center;
+                font-family: 'Raleway', sans-serif;
+                font-size: 46px;
+                line-height: 57.5px;
+                font-weight: 600;
+                color: $main-color;
+                margin-bottom: 70px;
+            }
+            &-content {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                column-gap: 219px;
+                text-align: center;
+                &-first {
+                    color: $main-color;
+                    font-family: 'Raleway', sans-serif;
+                    font-size: 24px;
+                    line-height: 31.2px;
+                    font-weight: 500;
+                    opacity: 0.5;
+                    &__first {
+                        margin-bottom: 72px;
+                    }
+                }
+                &-second {
+                    color: $main-color;
+                    font-family: 'Raleway', sans-serif;
+                    font-size: 24px;
+                    line-height: 31.2px;
+                    font-weight: 500;
+                    opacity: 0.5;
+                    &__first {
+                        margin-bottom: 72px;
+                    }
+                }
+                &-third {
+                    color: $main-color;
+                    font-family: 'Raleway', sans-serif;
+                    font-size: 24px;
+                    line-height: 31.2px;
+                    font-weight: 500;
+                    opacity: 0.5;
+                    &__first {
+                        margin-bottom: 72px;
+                    }
+                }
+            }
+        }
+    }
+    
+    @include for-large-tablet() {
+        .cover {
+            &__wrapper {
+                // margin-top: 100px;
+                align-content: center;
+                align-items: center;
+            }
+        }
+    }
+    
+    @include for-tablet() {
+        .cover {
+            &__wrapper {
+                margin-top: 80px;
+                & h2 {
+                    font-size: 36px;
+                    // &-content {}
+                }
+            }
+        }
+    }
+    
+    @include for-mobile() {
+        .cover {
+            &__wrapper {
+                &-content {
+                    display: grid;
+                    &-first {
+                        font-size: 18px;
+                        line-height: 23.4px;
+                        display: grid;
+                        grid-template-columns: auto auto;
+                        align-content: center;
+                        &__last {
+                            order: 2;
+                        }
+                    }
+                    &-second {
+                        font-size: 18px;
+                        line-height: 23.4px;
+                        display: grid;
+                        grid-template-columns: auto auto;
+                        align-content: center;
+                        &__first {
+                            order: 1;
+                        }
+                    }
+                    &-third {
+                        font-size: 18px;
+                        line-height: 23.4px;
+                        display: grid;
+                        align-content: center;
+                        grid-template-columns: auto auto;
+                        &__first {
+                            order: 2;
+                        }
+                    }
+                }
+            }
+        }
+    }

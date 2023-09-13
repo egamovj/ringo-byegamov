@@ -1,0 +1,29 @@
+@mixin center-items {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin font {
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    line-height: 16px;
+}
+
+@mixin for-large-tablet() {
+    @media screen and (max-width: 992px) {
+        @content;
+    }
+}
+
+@mixin for-tablet() {
+    @media (max-width: 768px) {
+        @content;
+    }
+}
+
+@mixin for-mobile() {
+    @media (max-width: 576px) {
+        @content;
+    }
+}
